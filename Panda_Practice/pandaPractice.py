@@ -17,6 +17,7 @@ print('--------------------------------------------------')
 print(df.tail(3))
 print('--------------------------------------------------')
 # finding the shape of the dataset
+
 print(df.shape)
 print('--------------------------------------------------')
 # getting information about the dataset
