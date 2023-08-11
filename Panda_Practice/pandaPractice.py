@@ -37,6 +37,7 @@ print(df[df['Marks'].between(90, 100)])
 print('--------------------------------------------------')
 # Finding Average , min, max of the Marks column
 print(df['Marks'].mean())
+
 # Adding this average column to the dataFrame
 df['Average'] = df['Marks'].mean()
 print(df)
