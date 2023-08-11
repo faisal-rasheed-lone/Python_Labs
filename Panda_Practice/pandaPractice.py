@@ -7,6 +7,7 @@ dict = {'Name': ['faisal', 'Aamir', 'Hanan', 'Huzaif', 'Mudasir', 'Owais'],
 
 df = pd.DataFrame(dict)
 # printing the dataframe
+
 print(df)
 print('------------------------------------------------')
 # printing only ist three rows
