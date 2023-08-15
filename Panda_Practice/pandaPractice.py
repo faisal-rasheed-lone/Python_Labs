@@ -7,6 +7,7 @@ dict = {'Name': ['faisal', 'Aamir', 'Hanan', 'Huzaif', 'Mudasir', 'Owais'],
 
 df = pd.DataFrame(dict)
 # printing the dataframe
+
 print(df)
 print('------------------------------------------------')
 # printing only ist three rows
@@ -16,6 +17,7 @@ print('--------------------------------------------------')
 print(df.tail(3))
 print('--------------------------------------------------')
 # finding the shape of the dataset
+
 print(df.shape)
 print('--------------------------------------------------')
 # getting information about the dataset
@@ -35,6 +37,7 @@ print(df[df['Marks'].between(90, 100)])
 print('--------------------------------------------------')
 # Finding Average , min, max of the Marks column
 print(df['Marks'].mean())
+
 # Adding this average column to the dataFrame
 df['Average'] = df['Marks'].mean()
 print(df)
