@@ -5,6 +5,7 @@ import cv2 as cv
 
 image = cv.imread("Samples/img_1.png")
 
+
 img = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 retval, S_binary_thresh = cv.threshold(image, 127.0, 255.0, cv.THRESH_BINARY)
 retval, binary_thresh_inverse = cv.threshold(image, 127.0, 255.0, cv.THRESH_BINARY_INV)
