@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Segmentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #image-upload {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #image-display {
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Segmentation</h1>
+
+    <div id="image-upload">
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload and Predict">
+        </form>
+    </div>
+
+    <div id="image-display">
+        <h2>Segmented Image</h2>
+        <img id="segmented-image" src="" alt="Segmented Image">
+    </div>
+
+    <script>
+        // JavaScript code to display the segmented image dynamically
+        const fileInput = document.querySelector('input[type="file"]');
+        const segmentedImage = document.getElementById('segmented-image');
+
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const url = URL.createObjectURL(file);
+                segmentedImage.src = url;
+            }
+        });
+    </script>
+</body>
+</html>
